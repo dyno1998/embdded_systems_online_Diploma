@@ -34,11 +34,11 @@ int main()
 	while(1)
 	{
 		R_ODR->pin.p_13=0;
-		//GPIO_ODR_REGISTER|=1<<13;
-		//for(int i =0;i<5000;i++);
-		//GPIO_ODR_REGISTER&=~(1<<13);
-		//R_ODR->pin.p_13=0;
-		//for(int i =0;i<5000;i++);
+		GPIO_ODR_REGISTER|=1<<13;
+		for(int i =0;i<5000;i++);
+		GPIO_ODR_REGISTER&=~(1<<13);
+		R_ODR->pin.p_13=0;
+		for(int i =0;i<5000;i++);
 
 	}
 	return 0;
